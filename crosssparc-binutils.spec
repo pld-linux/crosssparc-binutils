@@ -16,7 +16,7 @@ BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	perl-devel
-%ifarch sparc sparc32
+%ifarch sparc32
 BuildRequires:	sparc32
 %endif
 ExcludeArch:	sparc sparcv9
@@ -57,9 +57,6 @@ Ten pakiet zawiera wersjê skro¶n± generuj±c± kod dla SPARC.
 CFLAGS="%{rpmcflags}" \
 LDFLAGS="%{rpmldflags}" \
 CONFIG_SHELL="/bin/bash" \
-%ifarch sparc
-sparc32 \
-%endif
 ./configure \
 	--disable-shared \
 	--prefix=%{_prefix} \
