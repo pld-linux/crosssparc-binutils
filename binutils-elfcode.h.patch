@@ -1,5 +1,5 @@
---- binutils-2.16.91.0.7/bfd/elfcode.h.orig	2005-12-20 23:43:55.000000000 +0100
-+++ binutils-2.16.91.0.7/bfd/elfcode.h	2006-05-10 15:43:08.822548000 +0200
+--- binutils-2.17.50.0.1/bfd/elfcode.h.orig	2006-04-29 18:32:56.000000000 +0200
++++ binutils-2.17.50.0.1/bfd/elfcode.h	2006-05-11 20:15:56.000000000 +0200
 @@ -458,6 +458,25 @@
  	  && (x_ehdrp->e_ident[EI_MAG3] == ELFMAG3));
  }
@@ -54,6 +54,6 @@
 -	  || (i_ehdrp->e_shstrndx >= SHN_LORESERVE
 -	      && i_ehdrp->e_shstrndx <= SHN_HIRESERVE))
 +      if (! valid_section_index_p (i_ehdrp->e_shstrndx, elf_numsections (abfd)))
- 	goto got_wrong_format_error;
-     }
-   else if (i_ehdrp->e_shstrndx != 0)
+ 	{
+ 	  /* PR 2257:
+ 	     We used to just goto got_wrong_format_error here
