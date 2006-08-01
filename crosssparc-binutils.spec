@@ -5,13 +5,12 @@ Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla SPARC - binutils
 Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - SPARC binutils
 Summary(tr):	GNU geliþtirme araçlarý - SPARC binutils
 Name:		crosssparc-binutils
-Version:	2.17.50.0.1
+Version:	2.17.50.0.3
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	cfecfb29e260225fa192654f3763c2f8
-Patch0:		binutils-elfcode.h.patch
+# Source0-md5:	684c535df0ff8ffaa11fe4aed14539e7
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
@@ -52,7 +51,6 @@ Ten pakiet zawiera wersjê skro¶n± generuj±c± kod dla SPARC.
 
 %prep
 %setup -q -n binutils-%{version}
-%patch0 -p1
 
 %build
 cp /usr/share/automake/config.sub .
