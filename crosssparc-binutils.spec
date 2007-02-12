@@ -1,9 +1,9 @@
 Summary:	Cross SPARC GNU binary utility development utilities - binutils
-Summary(es.UTF-8):   Utilitarios para desarrollo de binarios de la GNU - SPARC binutils
-Summary(fr.UTF-8):   Utilitaires de développement binaire de GNU - SPARC binutils
-Summary(pl.UTF-8):   Skrośne narzędzia programistyczne GNU dla SPARC - binutils
-Summary(pt_BR.UTF-8):   Utilitários para desenvolvimento de binários da GNU - SPARC binutils
-Summary(tr.UTF-8):   GNU geliştirme araçları - SPARC binutils
+Summary(es.UTF-8):	Utilitarios para desarrollo de binarios de la GNU - SPARC binutils
+Summary(fr.UTF-8):	Utilitaires de développement binaire de GNU - SPARC binutils
+Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla SPARC - binutils
+Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - SPARC binutils
+Summary(tr.UTF-8):	GNU geliştirme araçları - SPARC binutils
 Name:		crosssparc-binutils
 Version:	2.17.50.0.3
 Release:	1
