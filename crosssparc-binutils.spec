@@ -5,18 +5,19 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla SPARC - binutils
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - SPARC binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - SPARC binutils
 Name:		crosssparc-binutils
-Version:	2.17.50.0.3
+Version:	2.17.50.0.17
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	684c535df0ff8ffaa11fe4aed14539e7
+# Source0-md5:	f1852ef43d7539480c77f813224ef81c
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
-%ifarch sparc32
+BuildRequires:	gettext-devel
+%ifarch sparc sparc32
 BuildRequires:	sparc32
 %endif
 ExcludeArch:	sparc sparcv9
@@ -81,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}
 
 %{__make} install \
+	INSTALL='$$s/install-sh -c' \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
 	infodir=$RPM_BUILD_ROOT%{_infodir} \
