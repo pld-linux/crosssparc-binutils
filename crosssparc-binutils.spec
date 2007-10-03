@@ -5,17 +5,20 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla SPARC - binutils
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - SPARC binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - SPARC binutils
 Name:		crosssparc-binutils
-Version:	2.17.50.0.17
+Version:	2.18.50.0.1
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	f1852ef43d7539480c77f813224ef81c
+# Source0-md5:	7bd8bd76a0ccae337456a6396224d150
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
+%ifarch sparc32
+BuildRequires:	sparc32
+%endif
 BuildRequires:	gettext-devel
 ExcludeArch:	sparc sparcv9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -57,6 +60,9 @@ cp /usr/share/automake/config.sub .
 CFLAGS="%{rpmcflags} -fno-strict-aliasing" \
 LDFLAGS="%{rpmldflags}" \
 CONFIG_SHELL="/bin/bash" \
+%ifarch sparc
+sparc32 \
+%endif
 ./configure \
 	--disable-shared \
 	--disable-nls \
