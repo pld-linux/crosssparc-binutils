@@ -16,9 +16,6 @@ BuildRequires:	automake
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
-%ifarch sparc32
-BuildRequires:	sparc32
-%endif
 BuildRequires:	gettext-devel
 ExcludeArch:	sparc sparcv9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -60,9 +57,6 @@ cp /usr/share/automake/config.sub .
 CFLAGS="%{rpmcflags} -fno-strict-aliasing" \
 LDFLAGS="%{rpmldflags}" \
 CONFIG_SHELL="/bin/bash" \
-%ifarch sparc
-sparc32 \
-%endif
 ./configure \
 	--disable-shared \
 	--disable-nls \
