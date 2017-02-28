@@ -5,12 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla SPARC - binutils
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - SPARC binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - SPARC binutils
 Name:		crosssparc-binutils
-Version:	2.18.50.0.1
-Release:	2
+Version:	2.26.1
+Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	7bd8bd76a0ccae337456a6396224d150
+Source0:	http://ftp.gnu.org/gnu/binutils/binutils-%{version}.tar.bz2
+# Source0-md5:	d2b24e5b5301b7ff0207414c34c3e0fb
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
