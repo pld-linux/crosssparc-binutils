@@ -6,7 +6,7 @@ Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - SP
 Summary(tr.UTF-8):	GNU geliştirme araçları - SPARC binutils
 Name:		crosssparc-binutils
 Version:	2.26.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/binutils/binutils-%{version}.tar.bz2
